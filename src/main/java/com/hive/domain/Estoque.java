@@ -17,14 +17,13 @@ public class Estoque {
     @JoinColumn(name = "id_base", nullable = false)
     private Base base;
 
-    @Column(name = "nome_estoque")
+    @Column(name = "nome")
     private String nome;
 
     private String descricao;
 
     private Integer capacidade;
     
-    // Um estoque tem muittos lotes
     @OneToMany(mappedBy = "estoque", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Lote> lotes = new HashSet<>();
 

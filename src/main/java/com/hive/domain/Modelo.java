@@ -35,7 +35,6 @@ public class Modelo {
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -43,7 +42,6 @@ public class Modelo {
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
