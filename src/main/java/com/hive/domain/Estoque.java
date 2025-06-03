@@ -23,8 +23,8 @@ public class Estoque {
     private String descricao;
 
     private Integer capacidade;
-
-    // Um estoque tem muitos lotes
+    
+    // Um estoque tem muittos lotes
     @OneToMany(mappedBy = "estoque", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Lote> lotes = new HashSet<>();
 
