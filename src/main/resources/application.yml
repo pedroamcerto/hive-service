@@ -1,6 +1,8 @@
 spring:
   application:
     name: "hive-service"
+  main:
+    allow-bean-definition-overriding: true
   datasource:
     url: jdbc:h2:mem:hive-db
     driver-class-name: org.h2.Driver
