@@ -2,11 +2,14 @@ package com.hive.domain;
 
 import com.hive.domain.enumerated.MissionStatus;
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity(name = "mission")
 public class Mission extends Auditable {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -23,7 +26,7 @@ public class Mission extends Auditable {
     @Column(name = "end_date")
     private LocalDateTime endDate;
 
-    @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CarbonCredit> carbonCredits;
 
     // Getters and setters

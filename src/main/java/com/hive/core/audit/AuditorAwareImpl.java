@@ -2,10 +2,12 @@ package com.hive.core.audit;
 
 import lombok.NonNull;
 import org.springframework.data.domain.AuditorAware;
+import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
-public class AuditAwareImpl implements AuditorAware<String> {
+@Component
+public class AuditorAwareImpl implements AuditorAware<String> {
     @Override
     @NonNull
     public Optional<String> getCurrentAuditor() {
