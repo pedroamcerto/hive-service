@@ -15,5 +15,6 @@ public class GetMissionDto {
     private MissionStatus status;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
+    private Double totalTon;
     private List<GetCarbonCreditMissionDto> carbonCredits;
 }
