@@ -1,0 +1,445 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v11.1.0"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2025-06-05T01:46:20.522Z",
+				"time": 10.511,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:8080/api/v1/mission/1/status",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.1.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"status\": \"ACTIVE\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Length",
+							"value": "0"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 05 Jun 2025 01:45:03 GMT"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 10.511,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Update Status"
+			},
+			{
+				"startedDateTime": "2025-06-05T01:46:20.522Z",
+				"time": 12.883000000000001,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/api/v1/carbon-credit",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.1.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 05 Jun 2025 01:45:17 GMT"
+						}
+					],
+					"content": {
+						"size": 299,
+						"mimeType": "application/json",
+						"text": "[{\"id\":1,\"emmitDate\":\"2025-06-04T12:00:00\",\"carbonTon\":100.5,\"mission\":{\"id\":1,\"nome\":\"Missão de Reflorestamento 2\",\"status\":\"ACTIVE\",\"startDate\":\"2025-06-04T00:00:00\",\"endDate\":\"2025-06-10T00:00:00\",\"totalTon\":200.1,\"carbonCredits\":[{\"id\":1,\"emmitDate\":\"2025-06-04T12:00:00\",\"carbonTon\":100.5}]}}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 12.883000000000001,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Get"
+			},
+			{
+				"startedDateTime": "2025-06-05T01:46:20.522Z",
+				"time": 8.484,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/api/v1/carbon-credit",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.1.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"emmitDate\": \"2025-06-04T12:00:00\",\n  \"carbonTon\": 100.5,\n  \"mission\": {\n    \"id\": 1\n  }\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Length",
+							"value": "0"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 05 Jun 2025 01:45:24 GMT"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 8.484,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Create"
+			},
+			{
+				"startedDateTime": "2025-06-05T01:46:20.522Z",
+				"time": 9.266,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:8080/api/v1/mission/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.1.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"nome\": \"Missão de Reflorestamento 2\",\n  \"startDate\": \"2025-06-04T00:00:00\",\n  \"endDate\": \"2025-06-10T00:00:00\",\n\t\"totalTon\": 200.10\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 400,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 05 Jun 2025 01:45:31 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "close"
+						}
+					],
+					"content": {
+						"size": 168,
+						"mimeType": "application/json",
+						"text": "{\"message\":\"Não é possível alterar uma missão que não esteja na primeira etapa.\",\"status\":400,\"timestamp\":\"2025-06-04T22:45:31.2692991\",\"path\":\"/api/v1/mission/1\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 9.266,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Update"
+			},
+			{
+				"startedDateTime": "2025-06-05T01:46:20.522Z",
+				"time": 46.919000000000004,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:8080/api/v1/mission/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.1.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 204,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Date",
+							"value": "Thu, 05 Jun 2025 01:41:41 GMT"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 46.919000000000004,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Delete"
+			},
+			{
+				"startedDateTime": "2025-06-05T01:46:20.522Z",
+				"time": 247.54000000000002,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/api/v1/mission",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.1.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"nome\": \"Missão de Reflorestamento\",\n  \"startDate\": \"2025-06-04T23:00:00\",\n  \"endDate\": \"2025-06-07T00:00:00\",\n\t\"totalTon\": 100.5\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Length",
+							"value": "0"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 05 Jun 2025 01:44:46 GMT"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 247.54000000000002,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Create"
+			},
+			{
+				"startedDateTime": "2025-06-05T01:46:20.522Z",
+				"time": 5.702,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/api/v1/mission",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.1.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 05 Jun 2025 01:45:26 GMT"
+						}
+					],
+					"content": {
+						"size": 292,
+						"mimeType": "application/json",
+						"text": "[{\"id\":1,\"nome\":\"Missão de Reflorestamento 2\",\"status\":\"COMPLETED\",\"startDate\":\"2025-06-04T00:00:00\",\"endDate\":\"2025-06-10T00:00:00\",\"totalTon\":200.1,\"carbonCredits\":[{\"id\":1,\"emmitDate\":\"2025-06-04T12:00:00\",\"carbonTon\":100.5},{\"id\":2,\"emmitDate\":\"2025-06-04T12:00:00\",\"carbonTon\":100.5}]}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 5.702,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Get"
+			}
+		]
+	}
+}
