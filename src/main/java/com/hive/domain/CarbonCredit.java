@@ -22,10 +22,6 @@ public class CarbonCredit extends Auditable{
     @JoinColumn(name = "mission_id")
     private Mission mission;
 
-    @ManyToOne
-    @JoinColumn(name = "project_id")
-    private Project project;
-
     public Long getId() {
         return id;
     }
@@ -56,13 +52,5 @@ public class CarbonCredit extends Auditable{
 
     public void setMission(Mission mission) {
         this.mission = mission;
-    }
-
-    public Project getProject() {
-        return project;
-    }
-
-    public void setProject(Project project) {
-        this.project = project;
     }
 }

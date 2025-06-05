@@ -26,6 +26,9 @@ public class Mission extends Auditable {
     @Column(name = "end_date")
     private LocalDateTime endDate;
 
+    @Column(name = "total_ton")
+    private Double totalTon;
+
     @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CarbonCredit> carbonCredits;
 
@@ -76,5 +79,13 @@ public class Mission extends Auditable {
 
     public void setCarbonCredits(List<CarbonCredit> carbonCredits) {
         this.carbonCredits = carbonCredits;
+    }
+
+    public Double getTotalTon() {
+        return totalTon;
+    }
+
+    public void setTotalTon(Double totalTon) {
+        this.totalTon = totalTon;
     }
 }
