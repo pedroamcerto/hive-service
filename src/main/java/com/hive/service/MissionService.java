@@ -53,6 +53,10 @@ public class MissionService implements ServiceInterface<GetMissionDto, CreateMis
                 () -> new NotFoundException("Missão não encontrada")
         );
 
+        if(!mission.getStatus().equals(MissionStatus.WAITING)){
+            throw new BadRequestException("Não é possível alterar uma missão que não esteja na primeira etapa.");
+        }
+
         modelMapper.map(entity, mission);
         missionRepository.save(mission);
     }
@@ -93,8 +97,12 @@ public class MissionService implements ServiceInterface<GetMissionDto, CreateMis
      */
     @Override
     public void delete(Long id) {
-        if(!missionRepository.existsById(id)){
-            throw new NotFoundException("Missão não encontrada.");
+        Mission mission = missionRepository.findById(id).orElseThrow(
+                () -> new NotFoundException("Missão não encontrada")
+        );
+
+        if(!mission.getCarbonCredits().isEmpty()){
+            throw new BadRequestException("Não é possível deletar uma missão com créditos associados.");
         }
 
         missionRepository.deleteById(id);

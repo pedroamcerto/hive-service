@@ -18,19 +18,20 @@ public class DateValidator implements ConstraintValidator<ValidDateRange, LocalD
     }
 
     /**
-     * Valida se a data fornecida não é anterior à data e hora atuais.
+     * Valida se a data fornecida não é anterior à data atual.
      *
      * @param value A data a ser validada.
      * @param context O contexto da validação, fornecido pelo framework.
-     * @return `true` se a data não for anterior à data e hora atuais, `false` caso contrário.
+     * @return `true` se a data não for anterior à data atual, `false` caso contrário.
      */
     @Override
     public boolean isValid(LocalDateTime value, ConstraintValidatorContext context) {
         if (value == null) {
-            return true; // Se o valor for nulo, considera válido. A validação de nulos será feita por outra anotação, como @NotNull.
+            return true;
         }
 
-        // Verifica se a data não é anterior à data e hora atuais
-        return !value.isBefore(LocalDateTime.now());
+        LocalDateTime now = LocalDateTime.now().toLocalDate().atStartOfDay();
+
+        return !value.toLocalDate().isBefore(now.toLocalDate());
     }
 }
